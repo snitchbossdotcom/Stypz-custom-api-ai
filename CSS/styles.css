@@ -1,0 +1,140 @@
+/* Premium Mobile‑First SaaS UI – styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f5f7fa;
+  color: #111827;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top bar */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.brand {
+  font-size: 18px;
+  font-weight: 600;
+}
+.settings-btn {
+  padding: 8px 12px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Sidebar settings */
+.sidebar {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 85%;
+  height: 100vh;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: -6px 0 18px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  z-index: 50;
+}
+.sidebar.open { right: 0; }
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.sidebar label {
+  display: block;
+  margin-top: 16px;
+  font-size: 13px;
+  color: #374151;
+}
+.sidebar select,
+.sidebar input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  margin-top: 6px;
+  background: #f9fafb;
+}
+.close-btn {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background: #ef4444;
+  color: white;
+  font-weight: 600;
+}
+
+/* Chatbox */
+.chatbox {
+  flex: 1;
+  padding: 14px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #ffffff;
+}
+
+/* Messages */
+.msg {
+  max-width: 80%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-size: 15px;
+  line-height: 1.45;
+  animation: fadeIn 0.2s ease;
+}
+.user {
+  margin-left: auto;
+  background: #4f46e5;
+  color: #fff;
+}
+.ai {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+}
+
+/* Input bar */
+.input-bar {
+  display: flex;
+  padding: 12px;
+  gap: 10px;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+.input-bar input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+.input-bar button {
+  padding: 12px 18px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+  }
