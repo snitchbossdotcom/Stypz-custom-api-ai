@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stypz AI Chatbot</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">Stypz AI</div>
+    <button id="openSettings" class="settings-btn">⚙️</button>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <h2>Settings</h2>
+
+    <label for="provider">AI Provider</label>
+    <select id="provider">
+      <option value="openai">OpenAI</option>
+      <option value="anthropic">Anthropic</option>
+      <option value="google">Google Gemini</option>
+      <option value="custom">Custom API</option>
+    </select>
+
+    <label for="apikey">API Key</label>
+    <input id="apikey" placeholder="Enter API key" />
+
+    <label for="customUrl">Custom API URL</label>
+    <input id="customUrl" placeholder="https://example.com/api" />
+
+    <button id="closeSettings" class="close-btn">Close</button>
+  </aside>
+
+  <main id="chatbox" class="chatbox"></main>
+
+  <div class="input-bar">
+    <input id="userInput" placeholder="Message Stypz AI..." />
+    <button id="sendBtn">Send</button>
+  </div>
+
+  <script src="api.js"></script>
+  <script src="LocalStorage.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
